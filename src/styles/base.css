@@ -1,8 +1,16 @@
+/** 狭い画面で横スクロール可能に */
 pre {
-  /** 狭い画面で横スクロール可能に */
   overflow-x: auto;
+}
 
-  /** コードの周囲に余白を持たせる */
+/** コードの周囲に余白を持たせる */
+pre {
   padding-block: 0.75rem;
+  padding-inline: 0;
+}
+pre [data-line] {
+  padding-block: 0;
+  /** 横スクロールした右端にも余白を適用するため、
+   * inline方向のpaddingはここで指定 */
   padding-inline: 1rem;
 }
