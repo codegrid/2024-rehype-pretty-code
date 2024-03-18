@@ -1,4 +1,8 @@
 pre {
   /** 狭い画面で横スクロール可能に */
   overflow-x: auto;
+
+  /** コードの周囲に余白を持たせる */
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
 }
