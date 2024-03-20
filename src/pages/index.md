@@ -3,6 +3,8 @@ layout: "../layouts/Layout.astro"
 title: "Rehype Pretty Codeのサンプル"
 ---
 
+`Hello World!`という文字列を、`console.log(){:js}`で表示してみましょう。
+
 ```js
 console.log("Hello World!")
 ```
