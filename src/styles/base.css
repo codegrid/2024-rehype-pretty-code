@@ -15,6 +15,12 @@ pre [data-line] {
   padding-inline: 1rem;
 }
 
+/** インラインコードの余白 */
+:not(pre) > code {
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+}
+
 /** タイポグラフィ */
 code {
   font-family: 'Menlo', 'Lucida Console', 'Monaco', 'Consolas', monospace;
@@ -24,5 +30,9 @@ code {
 
 /** 角丸 */
 pre {
+  border-radius: 5px;
+}
+/** インラインコードの角丸 */
+:not(pre) > code {
   border-radius: 5px;
 }
