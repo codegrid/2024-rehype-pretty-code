@@ -14,3 +14,15 @@ pre [data-line] {
    * inline方向のpaddingはここで指定 */
   padding-inline: 1rem;
 }
+
+/** タイポグラフィ */
+code {
+  font-family: 'Menlo', 'Lucida Console', 'Monaco', 'Consolas', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/** 角丸 */
+pre {
+  border-radius: 5px;
+}
