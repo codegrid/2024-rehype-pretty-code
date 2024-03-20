@@ -4,7 +4,7 @@ import rehypePrettyCode from 'rehype-pretty-code'
 
 /** @type {import('rehype-pretty-code').Options} */
 const prettyCodeOptions = {
-  /** これから追加していく */
+  defaultLang: 'plaintext',
 }
 
 export default defineConfig(
