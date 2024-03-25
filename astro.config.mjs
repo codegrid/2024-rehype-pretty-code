@@ -5,6 +5,10 @@ import rehypePrettyCode from 'rehype-pretty-code'
 /** @type {import('rehype-pretty-code').Options} */
 const prettyCodeOptions = {
   defaultLang: 'plaintext',
+  theme: {
+    dark: 'slack-dark',
+    light: 'slack-ochin',
+  },
 }
 
 export default defineConfig(
