@@ -1,10 +1,66 @@
-# hands-on-base
+# 2024-rehype-pretty-code
 
-## このディレクトリについて
+[Rehype Pretty Code](https://github.com/rehype-pretty/rehype-pretty-code)に関するCodeGrid連載のデモコードです。
+
+Rehype Pretty Codeを実際にAstroプロジェクトに導入し、Markdownページでのコードの表示をカスタマイズする例を示しています。
+
+## 各ブランチについて
+
+作業段階ごとにブランチを分けて掲載しています。
+
+### main
 
 Rehype Pretty Codeはまだ導入していない状態のサンプルAstroプロジェクトです。
 
-第1回の記事を読みながら、実際にRehype Pretty Codeをセットアップしてみてください。
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code)
+
+### demo-1-default-view
+
+Rehype Pretty Codeを導入し、オプション指定やスタイル追加などのカスタマイズを行う前の状態です。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-1-default-view)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/main...demo-1-default-view)
+
+### demo-2-styling
+
+コードブロックに基本的なスタイルを当てた状態です。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-2-styling)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-1-default-view...demo-2-styling)
+
+### demo-3-inline-code
+
+インラインコード表示に必要なスタイルやオプションを指定した状態です。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-3-inline-code)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-2-styling...demo-3-inline-code)
+
+### demo-4-theme-light-and-dark
+
+配色テーマをオプションで指定し、ライトモードとダークモードに応じた表示を実現した状態です。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-4-theme-light-and-dark)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-3-inline-code...demo-4-theme-light-and-dark)
+
+## 動作確認方法
+
+### 基本的なコマンド
+
+- 初めて実行する際は、`npm i`で依存ライブラリをインストール
+- 表示確認をする際は、`npm run dev`で開発サーバーを起動
+
+### ページをカスタマイズしたい場合
+
+`src/pages`配下にある`.md`ファイルを編集してください。
+
+### スタイルをカスタマイズしたい場合
+
+`src/styles`配下にある`.css`ファイルを編集してください。
+
+新規CSSファイルを追加する場合は、
+
+1. `src/styles`配下に設置
+2. `src/layouts/Layout.astro`に`import`文を追加
 
 ## 備考：Astroについて
 
