@@ -1,8 +1,8 @@
 # 2024-rehype-pretty-code
 
-[Rehype Pretty Code](https://github.com/rehype-pretty/rehype-pretty-code)に関するCodeGrid連載のデモコードです。
+CodeGrid連載[Rehype Pretty Codeを使いこなす](https://www.codegrid.net/series/2024-rehype-pretty-code/)のデモコードです。
 
-Rehype Pretty Codeを実際にAstroプロジェクトに導入し、Markdownページでのコードの表示をカスタマイズする例を示しています。
+[Rehype Pretty Code](https://github.com/rehype-pretty/rehype-pretty-code)を実際にAstroプロジェクトに導入し、Markdownページでのコードの表示をカスタマイズする例を示しています。
 
 ## 各ブランチについて
 
