@@ -1,8 +1,8 @@
 # 2024-rehype-pretty-code
 
-[Rehype Pretty Code](https://github.com/rehype-pretty/rehype-pretty-code)に関するCodeGrid連載のデモコードです。
+CodeGrid連載[Rehype Pretty Codeを使いこなす](https://www.codegrid.net/series/2024-rehype-pretty-code/)のデモコードです。
 
-Rehype Pretty Codeを実際にAstroプロジェクトに導入し、Markdownページでのコードの表示をカスタマイズする例を示しています。
+[Rehype Pretty Code](https://github.com/rehype-pretty/rehype-pretty-code)を実際にAstroプロジェクトに導入し、Markdownページでのコードの表示をカスタマイズする例を示しています。
 
 ## 各ブランチについて
 
@@ -27,6 +27,20 @@ Rehype Pretty Codeを導入し、オプション指定やスタイル追加な�
 
 - [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-2-styling)
 - [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-1-default-view...demo-2-styling)
+
+### demo-3-inline-code
+
+インラインコード表示に必要なスタイルやオプションを指定した状態です。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-3-inline-code)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-2-styling...demo-3-inline-code)
+
+### demo-4-theme-light-and-dark
+
+配色テーマをオプションで指定し、ライトモードとダークモードに応じた表示を実現した状態です。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-4-theme-light-and-dark)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-3-inline-code...demo-4-theme-light-and-dark)
 
 ## 動作確認方法
 
