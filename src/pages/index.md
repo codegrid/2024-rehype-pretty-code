@@ -20,7 +20,7 @@ console.log("Hello World!")
 }
 ```
 
-```html
+```html showLineNumbers
 <svg width="250" height="250" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="box-shadow">
