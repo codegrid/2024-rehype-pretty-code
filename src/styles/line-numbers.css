@@ -1,0 +1,11 @@
+[data-line-numbers] {
+  /** lineカウンタの値を0に初期化 */
+  counter-reset: line;
+}
+
+[data-line-numbers] > [data-line]::before {
+  /** lineカウンタの値をインクリメント（1増やす） */
+  counter-increment: line;
+  /** lineカウンタの値を表示する */
+  content: counter(line);
+}
