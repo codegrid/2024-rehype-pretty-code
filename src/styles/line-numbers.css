@@ -22,4 +22,7 @@
   width: 2ch;
   /** 右寄せに */
   text-align: end;
+
+  /** 行番号は薄めに表示する */
+  opacity: 0.5;
 }
