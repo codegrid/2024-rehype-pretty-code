@@ -16,4 +16,10 @@
 
   /** 行番号とコードの間に余白を追加 */
   margin-inline-end: 0.75rem;
+
+  /** 数値2桁分の幅を確保 */
+  display: inline-block;
+  width: 2ch;
+  /** 右寄せに */
+  text-align: end;
 }
