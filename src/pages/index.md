@@ -34,3 +34,13 @@ console.log("Hello World!")
   <rect fill="#D2E0FB" filter="url(#box-shadow)" x="25" y="25" width="200" height="200" />
 </svg>
 ```
+
+```html showLineNumbers{3}
+<filter id="box-shadow">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
+  <feMerge>
+    <feMergeNode />
+    <feMergeNode in="SourceGraphic" />
+  </feMerge>
+</filter>
+```
