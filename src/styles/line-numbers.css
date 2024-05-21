@@ -3,9 +3,17 @@
   counter-reset: line;
 }
 
+/** 行番号を表示する場合、各行の左paddingを再設定 */
+[data-line-numbers] > [data-line] {
+  padding-inline-start: 0.75rem;
+}
+
 [data-line-numbers] > [data-line]::before {
   /** lineカウンタの値をインクリメント（1増やす） */
   counter-increment: line;
   /** lineカウンタの値を表示する */
   content: counter(line);
+
+  /** 行番号とコードの間に余白を追加 */
+  margin-inline-end: 0.75rem;
 }
