@@ -30,7 +30,13 @@ pre:has([data-highlighted-line])::after {
 }
 @media (prefers-color-scheme: dark) {
   [data-highlighted-line] {
-    background-color: #464c55;
+    background-color: #414751;
+  }
+
+  /** 各トークン */
+  [data-highlighted-line] span {
+    /** 読みやすさを担保するためにコントラストを上げる */
+    filter: contrast(1.3);
   }
 }
 
