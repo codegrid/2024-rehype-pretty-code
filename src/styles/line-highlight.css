@@ -21,6 +21,9 @@ pre:has([data-highlighted-line])::after {
 
 /** ハイライト行 */
 [data-highlighted-line] {
+  /** ハイライト行インジケータの配置用 */
+  position: relative;
+
   /** opacityの影響を受けないように、ハイライト用の背景色で上書き */
   z-index: 1;
   background-color: aliceblue;
@@ -29,4 +32,12 @@ pre:has([data-highlighted-line])::after {
   [data-highlighted-line] {
     background-color: #464c55;
   }
+}
+
+/** ハイライト行インジケータ */
+[data-highlighted-line]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-inline-start: 0.25em solid #59d5e0;
 }
