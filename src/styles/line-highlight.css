@@ -1,0 +1,20 @@
+pre:has([data-highlighted-line]) {
+  /** 全体を薄くするレイヤーの配置用 */
+  position: relative;
+}
+
+/** 全体を薄くするレイヤー */
+pre:has([data-highlighted-line])::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  /** 50%透過した背景を重ねることで、全体を薄くする */
+  opacity: 0.5;
+  background-color: var(--shiki-light-bg);
+}
+@media (prefers-color-scheme: dark) {
+  pre:has([data-highlighted-line])::after {
+    background-color: var(--shiki-dark-bg);
+  }
+}
