@@ -18,3 +18,15 @@ pre:has([data-highlighted-line])::after {
     background-color: var(--shiki-dark-bg);
   }
 }
+
+/** ハイライト行 */
+[data-highlighted-line] {
+  /** opacityの影響を受けないように、ハイライト用の背景色で上書き */
+  z-index: 1;
+  background-color: aliceblue;
+}
+@media (prefers-color-scheme: dark) {
+  [data-highlighted-line] {
+    background-color: #464c55;
+  }
+}
