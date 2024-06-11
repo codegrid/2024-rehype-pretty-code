@@ -42,6 +42,20 @@ Rehype Pretty Codeを導入し、オプション指定やスタイル追加な�
 - [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-4-theme-light-and-dark)
 - [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-3-inline-code...demo-4-theme-light-and-dark)
 
+### demo-5-line-number
+
+行番号の表示を実現するサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-5-line-number)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-4-theme-light-and-dark...demo-5-line-number)
+
+### demo-6-line-highlight
+
+特定の行のハイライト表示を実現するサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-6-line-highlight)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-5-line-number...demo-6-line-highlight)
+
 ## 動作確認方法
 
 ### 基本的なコマンド
