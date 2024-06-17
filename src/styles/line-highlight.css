@@ -12,6 +12,9 @@ pre:has([data-highlighted-line])::after {
   /** 50%透過した背景を重ねることで、全体を薄くする */
   opacity: 0.5;
   background-color: var(--shiki-light-bg);
+
+  /** ドラッグでのテキスト選択に支障をきたさないように */
+  pointer-events: none;
 }
 @media (prefers-color-scheme: dark) {
   pre:has([data-highlighted-line])::after {
@@ -27,6 +30,9 @@ pre:has([data-highlighted-line])::after {
   /** opacityの影響を受けないように、ハイライト用の背景色で上書き */
   z-index: 1;
   background-color: aliceblue;
+
+  /** ドラッグでのテキスト選択に支障をきたさないように */
+  pointer-events: none;
 }
 @media (prefers-color-scheme: dark) {
   [data-highlighted-line] {
