@@ -1,0 +1,13 @@
+[data-highlighted-chars] {
+  background: #ddd;
+  padding-inline: 0.3em;
+  border-radius: 0.7em;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-highlighted-chars] {
+    background: dimgray;
+    filter: contrast(1.5);
+  }
+}
