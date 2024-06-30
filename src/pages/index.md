@@ -18,6 +18,6 @@ title: "Rehype Pretty Codeのサンプル"
 </svg>
 ```
 
-1. `feGaussianBlur`で、ぼかしを作成します。
-2. `feMergeNode`の`in`属性は、省略すると直前のフィルタの出力（ここでは、`feGaussianBlur`の結果）になります。
-3. `SourceGraphic` は、フィルタ適用前の元の画像（ここでは、`rect`要素の描画結果）を表します。
+1. `feGaussianBlur{:.entity.name.tag}`で、ぼかしを作成します。
+2. `feMergeNode{:.entity.name.tag}`の`in{:.entity.other.attribute-name}`属性は、省略すると直前のフィルタの出力（ここでは、`feGaussianBlur{:.entity.name.tag}`の結果）になります。
+3. `SourceGraphic{:.string}` は、フィルタ適用前の元の画像（ここでは、`rect{:.entity.name.tag}`要素の描画結果）を表します。
