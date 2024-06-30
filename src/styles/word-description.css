@@ -1,0 +1,79 @@
+/** ハイライト箇所が存在するコードブロック */
+pre:has([data-highlighted-chars]) {
+  /** コードブロックごとにカウンターを用意 */
+  counter-reset: highlighted;
+}
+
+/** ハイライト箇所 */
+[data-highlighted-chars] {
+  /** ハイライト表示したい内容と番号を横並びにする指定 */
+  display: inline-flex;
+  align-items: center;
+
+  /** 背景色、余白など */
+  background: #ddd;
+  padding-inline: 0.3em;
+  border-radius: 0.7em;
+}
+
+/** ハイライト箇所に添える黒丸番号 */
+[data-highlighted-chars]::after {
+  /** ハイライト箇所が現れるごとに、カウンターを加算 */
+  counter-increment: highlighted;
+  /** 番号を表示 */
+  content: counter(highlighted);
+
+  /** 黒丸とその中の番号のスタイル */
+  font-size: 0.6rem;
+  background: #111;
+  color: #fefefe;
+  border-radius: 999px;
+  margin-left: 0.25rem;
+  line-height: 1.6;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-highlighted-chars] {
+    background: dimgray;
+    filter: contrast(1.5);
+  }
+}
+
+/** ハイライト箇所が存在するコードブロックの直後の順序つきリスト */
+:has([data-highlighted-chars]) + ol {
+  /** カウンターを用意 */
+  counter-reset: highlighted;
+  /** デフォルトのリストマーカー（番号）は非表示に */
+  list-style: none;
+}
+
+:has([data-highlighted-chars]) + ol > li {
+  /** リストアイテムのコンテンツと黒丸番号を横並びにする指定 */
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  /** テキストなどのスタイル */
+  line-height: 2;
+}
+
+/** リストマーカーの代わりに表示する黒丸番号 */
+:has([data-highlighted-chars]) + ol > li::before {
+  counter-increment: highlighted;
+  content: counter(highlighted);
+
+  /** 黒丸とその中の番号のスタイル */
+  font-weight: bold;
+  background-color: #111;
+  color: #fefefe;
+  border-radius: 999px;
+  font-size: 0.5em;
+  width: 2.5em;
+  height: 2.5em;
+  text-align: center;
+  margin-inline-end: 1em;
+}
