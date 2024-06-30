@@ -1,0 +1,52 @@
+/** タイトルがある場合、preの角丸と余白を調整 */
+[data-rehype-pretty-code-title] + pre {
+  margin-block-start: 0;
+  padding-block-start: 0.5rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/** タイトルがない場合の言語名表示を削除 */
+[data-rehype-pretty-code-title] + pre::before {
+  display: none;
+}
+
+/** タイトル部分のデザイン */
+[data-rehype-pretty-code-title] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  padding-inline-start: 1em;
+  font-size: 0.9rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/** 言語名表示 */
+[data-rehype-pretty-code-title]::after {
+  content: attr(data-language);
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  background-color: #f0f0f0;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  display: inline-block;
+  min-width: 4ex;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/** ダークモードの場合の調整 */
+@media (prefers-color-scheme: dark) {
+  [data-rehype-pretty-code-title] {
+    mix-blend-mode: exclusion;
+  }
+
+  [data-rehype-pretty-code-title]::after {
+    filter: brightness(0.9);
+  }
+}
