@@ -1,6 +1,6 @@
 /** テーマに応じた背景色 */
 [data-theme*=' '] {
-  background-color: var(--shiki-light-bg);
+  background-color: var(--shiki-light-bg, #fff);
 }
 
 /** トークンごとの文字色 */
@@ -12,7 +12,7 @@
 @media (prefers-color-scheme: dark) {
   /** テーマに応じた背景色 */
   [data-theme*=' '] {
-    background-color: var(--shiki-dark-bg);
+    background-color: var(--shiki-dark-bg, #222);
   }
 
   /** トークンごとの文字色 */
