@@ -1,0 +1,40 @@
+pre[data-language] {
+  /** 言語名とコードブロック上端の間に余白が現れないように */
+  padding-block-start: 0;
+}
+
+pre[data-language]::before {
+  /** 言語名を表示 */
+  content: attr(data-language);
+
+  /** 長いコードをスクロールしても、言語名は左上に固定 */
+  position: sticky;
+  left: 0;
+  top: 0;
+
+  /** 最低4文字（アルファベットの小文字の幅 * 4）分の幅を確保 */
+  display: inline-block;
+  min-width: 4ex;
+
+  /** 行ハイライト時の全体を薄くするレイヤーより上に重ねる */
+  z-index: 2;
+
+  /** その他のスタイル */
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  background-color: #f0f0f0;
+  font-size: 0.75rem;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  line-height: 1.5;
+  mix-blend-mode: exclusion;
+  filter: invert(1);
+}
+
+/** ダークモードの場合の調整 */
+@media (prefers-color-scheme: dark) {
+  pre[data-language]::before {
+    filter: invert(1) brightness(1.3);
+  }
+}
