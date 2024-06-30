@@ -4,7 +4,7 @@ import rehypePrettyCode from 'rehype-pretty-code'
 
 /** @type {import('rehype-pretty-code').Options} */
 const prettyCodeOptions = {
-  defaultLang: 'plaintext',
+  defaultLang: 'text',
   theme: {
     dark: 'slack-dark',
     light: 'slack-ochin',

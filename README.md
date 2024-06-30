@@ -42,6 +42,55 @@ Rehype Pretty Codeを導入し、オプション指定やスタイル追加な�
 - [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-4-theme-light-and-dark)
 - [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-3-inline-code...demo-4-theme-light-and-dark)
 
+### demo-5-line-number
+
+行番号の表示を実現するサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-5-line-number)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-4-theme-light-and-dark...demo-5-line-number)
+
+### demo-6-line-highlight
+
+特定の行のハイライト表示を実現するサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-6-line-highlight)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-5-line-number...demo-6-line-highlight)
+
+### demo-7-keyword-highlight
+
+特定の変数が使われている箇所をハイライト表示するサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-7-keyword-highlight)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-6-line-highlight...demo-7-keyword-highlight)
+
+### demo-8-keyword-description
+
+ハイライト箇所に番号を表示し、コードブロックの下に各番号に対応する解説を添えたコンテンツを実現するサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-8-keyword-description)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-7-keyword-highlight...demo-8-keyword-description)
+
+### demo-9-inline-token
+
+単一のトークンを表示するインラインコードにトークンIDを指定することで、正確なシンタックスハイライトを適用したサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-9-inline-token)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-8-keyword-description...demo-9-inline-token)
+
+### demo-10-show-language
+
+コードブロックに言語名を表示したサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-10-show-language)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-9-inline-token...demo-10-show-language)
+
+### demo-11-with-title
+
+タイトル付きのコードブロックを実現するサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-11-with-title)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-10-show-language...demo-11-with-title)
+
 ## 動作確認方法
 
 ### 基本的なコマンド
