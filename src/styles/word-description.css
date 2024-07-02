@@ -68,6 +68,7 @@ pre:has([data-highlighted-chars]) {
 
   /** 黒丸とその中の番号のスタイル */
   font-family: 'Menlo', 'Lucida Console', 'Monaco', 'Consolas', monospace;
+  font-weight: bold;
   background-color: #111;
   color: #fefefe;
   border-radius: 999px;
