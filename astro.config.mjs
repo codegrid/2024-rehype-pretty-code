@@ -9,6 +9,9 @@ const prettyCodeOptions = {
     dark: 'slack-dark',
     light: 'slack-ochin',
   },
+  onVisitLine(lineElement) {
+    console.log(JSON.stringify(lineElement, null, 2))
+  },
 }
 
 export default defineConfig(
