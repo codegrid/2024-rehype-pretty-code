@@ -67,13 +67,16 @@ pre:has([data-highlighted-chars]) {
   content: counter(highlighted);
 
   /** 黒丸とその中の番号のスタイル */
+  font-family: 'Menlo', 'Lucida Console', 'Monaco', 'Consolas', monospace;
   font-weight: bold;
   background-color: #111;
   color: #fefefe;
   border-radius: 999px;
-  font-size: 0.5em;
-  width: 2.5em;
-  height: 2.5em;
-  text-align: center;
+  font-size: 0.6rem;
+  line-height: 1;
+  width: 2em;
+  height: 2em;
+  display: grid;
+  place-items: center;
   margin-inline-end: 1em;
 }
