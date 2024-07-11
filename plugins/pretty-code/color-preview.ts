@@ -23,5 +23,8 @@ const createText = (text: string): Text => ({
 })
 
 export const addColorPreview = (lineElement: LineElement) => {
-  // WIP：これから実装する
+  // 行を描画する要素の子要素は、各トークンを描画する要素
+  const tokenElements = lineElement.children
+
+  // WIP: 続く…
 }
