@@ -1,6 +1,7 @@
 import type { LineElement } from 'rehype-pretty-code'
 import type { Element, Text } from 'hast'
 import { toString } from 'hast-util-to-string'
+import { getHtmlColors } from './colors-regex'
 
 interface TextWithRange {
   text: string // テキスト
@@ -44,6 +45,12 @@ export const addColorPreview = (lineElement: LineElement) => {
     },
     []
   )
+
+  // 各トークンの文字列を連結して、行全体の文字列を取得
+  const lineText = tokens.map(({ text }) => text).join('')
+
+  // 行全体の文字列から色コードを抽出
+  const colors = getHtmlColors(lineText)
 
   // WIP: 続く…
 }
