@@ -72,6 +72,70 @@ export const addColorPreview = (lineElement: LineElement) => {
     // そのトークンを描画する要素に対応するhASTオブジェクト
     const colorStartElement = tokenElements[colorStartTokenIndex]
 
-    // WIP: 続く…
+    // 最初のトークン内に色コード全体が含まれているかどうか
+    const isContained = color.end <= colorStartToken.end
+
+    if (isContained) {
+      // --- 色コードの全体が1つのトークン内にある場合
+      // 色コードを構成する最初の要素を、次の複数の要素に置換する
+
+      const beforeText = colorStartToken.text.slice(
+        0,
+        color.start - colorStartToken.start
+      )
+      const afterText = colorStartToken.text.slice(
+        color.end + 1 - colorStartToken.start
+      )
+
+      const newElements = [
+        // 色コードの前のテキストを描画する要素
+        {
+          ...colorStartElement, // すでに指定されているstyle属性などをコピー
+          children: [createText(beforeText)],
+        },
+        // 色プレビューと色コードを描画する要素
+        {
+          ...colorStartElement,
+          children: [
+            createColorPreviewElement(color.text), // 色プレビュー
+            createText(color.text), // 色コード
+          ],
+        },
+        // 色コードの後のテキストを描画する要素
+        {
+          ...colorStartElement,
+          children: [createText(afterText)],
+        },
+      ]
+
+      // colorStartElementを削除し、その位置にnewElementsを追加する
+      tokenElements.splice(colorStartTokenIndex, 1, ...newElements)
+    } else {
+      // --- 色コードが複数トークンで構成されている場合
+      // 色コードを構成する最初の要素を、次の複数の要素に置換する
+
+      const newElements = [
+        // 色コードの前に空白があれば、それを保持するための要素
+        {
+          ...colorStartElement,
+          children: [
+            createText(colorStartToken.text.startsWith(' ') ? ' ' : ''),
+          ],
+        },
+        // 色プレビューを描画する要素
+        {
+          ...colorStartElement,
+          children: [createColorPreviewElement(color.text)],
+        },
+        // 色コードを構成する最初の要素
+        {
+          ...colorStartElement,
+          children: [createText(colorStartToken.text.trim())], // すでに空白は描画しているのでtrim
+        },
+      ]
+
+      // colorStartElementを削除し、その位置にnewElementsを追加する
+      tokenElements.splice(colorStartTokenIndex, 1, ...newElements)
+    }
   }
 }
