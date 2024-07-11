@@ -52,5 +52,26 @@ export const addColorPreview = (lineElement: LineElement) => {
   // 行全体の文字列から色コードを抽出
   const colors = getHtmlColors(lineText)
 
-  // WIP: 続く…
+  // 色コードが見つからなかった場合は何もしない
+  if (colors.length === 0) return
+
+  for (const color of colors) {
+    // tokenが色コードcolor.textを構成する最初のトークンかどうかを判定する関数
+    const isColorStartToken = (token: TextWithRange, color: TextWithRange) => {
+      return color.start >= token.start && color.start <= token.end
+    }
+
+    // 色コードcolor.textを構成する最初のトークンのインデックス
+    const colorStartTokenIndex = tokens.findIndex((token) =>
+      isColorStartToken(token, color)
+    )
+    if (colorStartTokenIndex === -1) continue
+
+    // 色コードcolor.textを構成する最初のトークン
+    const colorStartToken = tokens[colorStartTokenIndex]
+    // そのトークンを描画する要素に対応するhASTオブジェクト
+    const colorStartElement = tokenElements[colorStartTokenIndex]
+
+    // WIP: 続く…
+  }
 }
