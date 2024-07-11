@@ -1,6 +1,12 @@
 import type { LineElement } from 'rehype-pretty-code'
 import type { Element, Text } from 'hast'
 
+interface TextWithRange {
+  text: string // テキスト
+  start: number // テキストの開始位置
+  end: number // テキストの終了位置
+}
+
 const createColorPreviewElement = (color: string): Element => ({
   type: 'element',
   tagName: 'span',
