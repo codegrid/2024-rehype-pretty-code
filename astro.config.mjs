@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config'
 // rehype-pretty-codeからrehypeプラグインをimport
 import rehypePrettyCode from 'rehype-pretty-code'
+import { toString } from 'hast-util-to-string'
 
 /** @type {import('rehype-pretty-code').Options} */
 const prettyCodeOptions = {
@@ -10,7 +11,12 @@ const prettyCodeOptions = {
     light: 'slack-ochin',
   },
   onVisitLine(lineElement) {
-    console.log(JSON.stringify(lineElement, null, 2))
+    // 各トークンを描画する要素の配列
+    const tokenElements = lineElement.children
+    // 各要素のテキストを取得
+    const tokenStrings = tokenElements.map((el) => toString(el))
+    // ターミナルに表示
+    console.log(tokenStrings)
   },
 }
 
