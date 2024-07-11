@@ -91,6 +91,27 @@ Rehype Pretty Codeを導入し、オプション指定やスタイル追加な�
 - [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-11-with-title)
 - [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-10-show-language...demo-11-with-title)
 
+### demo-12-visit-line-argument
+
+`onVisitLine`フックの引数に渡されるhASTオブジェクトをJSON形式で表示し、構造を理解するためのサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-12-visit-line-argument)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-11-with-title...demo-12-visit-line-argument)
+
+### demo-13-hast-to-string
+
+[hast-util-to-string](https://www.npmjs.com/package/hast-util-to-string)の`toString`メソッドを使って、hASTオブジェクトから、その要素が表示するテキストを取り出すサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-13-hast-to-string)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-12-visit-line-argument...demo-13-hast-to-string)
+
+### demo-14-color-preview
+
+Visitor Hooksを使って、色コードの直前にプレビューを表示する機能を実装したサンプルです。
+
+- [ブランチへのリンク](https://github.com/codegrid/2024-rehype-pretty-code/tree/demo-14-color-preview)
+- [前段階からの差分](https://github.com/codegrid/2024-rehype-pretty-code/compare/demo-13-hast-to-string...demo-14-color-preview)
+
 ## 動作確認方法
 
 ### 基本的なコマンド
