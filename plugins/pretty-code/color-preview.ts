@@ -31,7 +31,7 @@ export const addColorPreview = (lineElement: LineElement) => {
   // 各トークンの文字列と、その文字列が行全体のどこからどこまでの範囲にあるかを集計
   const tokens = tokenElements.reduce<TextWithRange[]>(
     (prevAll, tokenElement) => {
-      // hAST要素からテキストを取得
+      // hast要素からテキストを取得
       const text = toString(tokenElement)
       // ここまで集計したトークンのうち、最後のトークンを取得
       const prev = prevAll[prevAll.length - 1]
@@ -69,7 +69,7 @@ export const addColorPreview = (lineElement: LineElement) => {
 
     // 色コードcolor.textを構成する最初のトークン
     const colorStartToken = tokens[colorStartTokenIndex]
-    // そのトークンを描画する要素に対応するhASTオブジェクト
+    // そのトークンを描画する要素に対応するhastオブジェクト
     const colorStartElement = tokenElements[colorStartTokenIndex]
 
     // 最初のトークン内に色コード全体が含まれているかどうか
